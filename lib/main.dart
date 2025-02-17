@@ -15,9 +15,20 @@ class Applicaton extends StatelessWidget {
 
 Widget getApplication() {
   return MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.amber,
-      body: SafeArea(child: Text('seyedmohammadali')),
+      home: Scaffold(
+    backgroundColor: Colors.amber,
+    body: SafeArea(
+      child: DecoratedBox(
+        position: DecorationPosition.background,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('images/drum.png'),
+          fit: BoxFit.fitWidth,
+        )),
+        child: Center(
+          child: Text('seyedmohammadali'),
+        ),
+      ),
     ),
-  );
+  ));
 }
