@@ -12,3 +12,12 @@ class Applicaton extends StatelessWidget {
     return Container();
   }
 }
+
+Widget getApplication() {
+  return MaterialApp(
+    home: Scaffold(
+      backgroundColor: Colors.amber,
+      body: SafeArea(child: Text('seyedmohammadali')),
+    ),
+  );
+}
