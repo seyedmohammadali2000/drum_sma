@@ -26,7 +26,12 @@ Widget getApplication() {
           fit: BoxFit.fitWidth,
         )),
         child: Center(
-          child: Text('seyedmohammadali'),
+          child: TextButton(
+            onPressed: () {
+              print('abood');
+            },
+            child: Text(''),
+          ),
         ),
       ),
     ),
