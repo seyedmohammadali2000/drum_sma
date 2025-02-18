@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(Applicaton());
@@ -37,26 +38,61 @@ Widget getbody() {
           child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
-          Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+          Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playsound('c1.wav');
+                  },
+                  child: Text('1'))),
+          Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playsound('c2.wav');
+                  },
+                  child: Text('2')))
         ],
       )),
       Expanded(
           child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
-          Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+          Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playsound('h1.wav');
+                  },
+                  child: Text('3'))),
+          Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playsound('h2.wav');
+                  },
+                  child: Text('4')))
         ],
       )),
       Expanded(
           child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
-          Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+          Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playsound('k1.wav');
+                  },
+                  child: Text('5'))),
+          Expanded(
+              child: TextButton(
+                  onPressed: () {
+                    playsound('k2.wav');
+                  },
+                  child: Text('6')))
         ],
       )),
     ],
   );
+}
+
+playsound(String sound) {
+  var player = AudioCache();
+  player.play(sound);
 }
